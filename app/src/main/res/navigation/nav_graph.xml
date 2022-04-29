@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentMainDiary">
+
+    <fragment
+        android:id="@+id/fragmentMainDiary"
+        android:name="com.example.diaryapp.presentation.FragmentMainDiary"
+        android:label=" My diary"
+        tools:layout="@layout/fragment_main_diary" >
+        <action
+            android:id="@+id/action_fragmentMainDiary_to_fragmentEditDiary"
+            app:destination="@id/fragmentEditDiary" />
+        <action
+            android:id="@+id/action_fragmentMainDiary_to_fragmentAddDiary"
+            app:destination="@id/fragmentAddDiary" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentEditDiary"
+        android:name="com.example.diaryapp.presentation.FragmentEditDiary"
+        android:label="Edit diary note"
+        tools:layout="@layout/fragment_edit_diary" >
+        <argument
+            android:name="diaryItemId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAddDiary"
+        android:name="com.example.diaryapp.presentation.FragmentAddDiary"
+        android:label="Add diary note"
+        tools:layout="@layout/fragment_add_diary"/>
+</navigation>
