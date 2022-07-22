@@ -1,4 +1,4 @@
-package com.example.diaryapp.presentation
+package com.example.diaryapp.presentation.viewmodal
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

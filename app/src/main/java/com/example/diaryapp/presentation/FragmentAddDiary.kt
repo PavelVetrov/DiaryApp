@@ -10,6 +10,8 @@ import androidx.navigation.fragment.findNavController
 import com.example.diaryapp.R
 import com.example.diaryapp.databinding.FragmentAddDiaryBinding
 import com.example.diaryapp.domain.DiaryItem
+import com.example.diaryapp.presentation.viewmodal.ViewModalAddDiary
+import com.example.diaryapp.presentation.viewmodal.ViewModalFactory
 import java.text.SimpleDateFormat
 import java.util.*
 import javax.inject.Inject

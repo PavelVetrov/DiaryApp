@@ -1,10 +1,9 @@
 package com.example.diaryapp.di
 
 import androidx.lifecycle.ViewModel
-import com.example.diaryapp.presentation.FragmentAddDiary
-import com.example.diaryapp.presentation.ViewModalAddDiary
-import com.example.diaryapp.presentation.ViewModalEditDiary
-import com.example.diaryapp.presentation.ViewModalMainDiary
+import com.example.diaryapp.presentation.viewmodal.ViewModalAddDiary
+import com.example.diaryapp.presentation.viewmodal.ViewModalEditDiary
+import com.example.diaryapp.presentation.viewmodal.ViewModalMainDiary
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap

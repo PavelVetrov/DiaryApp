@@ -3,7 +3,6 @@ package com.example.diaryapp.presentation
 import android.content.Context
 import android.os.Bundle
 import android.view.*
-import android.widget.CalendarView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -11,7 +10,8 @@ import androidx.navigation.fragment.navArgs
 import com.example.diaryapp.R
 import com.example.diaryapp.databinding.FragmentEditDiaryBinding
 import com.example.diaryapp.domain.DiaryItem
-import java.text.SimpleDateFormat
+import com.example.diaryapp.presentation.viewmodal.ViewModalEditDiary
+import com.example.diaryapp.presentation.viewmodal.ViewModalFactory
 import java.util.*
 import javax.inject.Inject
 
@@ -71,14 +71,13 @@ class FragmentEditDiary : Fragment() {
 
     private fun setupDate() {
 
-        binding.buttonCalendarView.setOnDateChangeListener(CalendarView.OnDateChangeListener { _, year, month, dayOfMonth ->
-            val sdf = SimpleDateFormat("dd/MMMM/yyyy")
+        binding.buttonCalendarView.setOnDateChangeListener { _, year, month, dayOfMonth ->
             val calendar = Calendar.getInstance()
-            calendar[year, month] = dayOfMonth
-            date = sdf.format(calendar.time)
+            val getDate = calendar.set(dayOfMonth, year, month)
+            date = getDate.toString()
             binding.buttonCalendarView.visibility = View.GONE
             binding.chooseTitle.visibility = View.GONE
-        })
+        }
     }
 
     private fun saveDiaryItem() {

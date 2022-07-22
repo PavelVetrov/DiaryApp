@@ -15,6 +15,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.diaryapp.R
 import com.example.diaryapp.databinding.FragmentMainDiaryBinding
+import com.example.diaryapp.presentation.viewmodal.ViewModalFactory
+import com.example.diaryapp.presentation.viewmodal.ViewModalMainDiary
 import javax.inject.Inject
 
 
