@@ -1,4 +1,5 @@
 # DiaryApp
+The My Diary mobile application is built on the basis of the MVVM architectural design pattern and a stack of modern technologies. The application implements the addition, deletion and editing of text entries. It is also possible to change the color theme of the application.
 
 ## Libraries
 + MVVM Architecture
